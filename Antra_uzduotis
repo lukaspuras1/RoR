@@ -1,0 +1,108 @@
+Parašykite programą,kuri pasakytų, ar studentas išlaikė egzaminą,kai įvedamas gautas pažymys.
+	(Egzaminas išlaikytas ,jei gautas įvertinimas yra didesnis kaip 5).
+	
+	c++
+
+	cout<< "Iveskite pazymi:";
+	cin>> p;
+	if (p>=5)
+	cout<<"Egzaminas islaikytas";
+	else
+	cout<<"Egzaminas neislaikytas";
+
+	 
+
+
+	Ruby
+
+	 puts "Iveskite pazymi:"
+	  p = gets.chomp().to_i
+  if  p >= 5
+      puts "Egzaminas islaikytas" 
+  else
+      puts "Egzaminas neislaikytas" 
+
+  end
+  
+  
+  
+  
+  
+  Parašykite programą, kuri apskaičiuotų visų lyginių skaičių sandaugą intervale [10;20].
+  
+	c++
+  
+  int main()
+{
+    int sand=1;
+    for(int i=10; i<=20; i++) // ciklo pradzia
+    {
+        if(i%2==0) sand = i*sand; // salyga tikrinanti ar skaičius yra lyginis
+    }
+    cout << "Visu lyginiu skaiciu sandauga intervale [10;20]= " << sand << endl; // dialogo langas su ekranu
+    return 0;
+} 
+
+Ruby
+
+a=10
+b=20
+def lyginiu_sandauga(a,b)
+  arr = *(a..b)
+  array1 = arr.select(&:even?)
+  array1.inject(:*)
+end
+puts lyginiu_sandauga(a,b)
+
+Parašykite programa , kuri įvedus 3 skaičius , nustatytų , kuris iš jų yra mažiausias.
+  
+  c++
+  
+#include <iostream>
+int a;
+int b;
+int c;
+int main() {
+  std::cout << "Iveskite 1 skaiciu\n";
+  std::cin>>a;
+  std::cout << "Iveskite 2 skaiciu\n";
+  std::cin>>b;
+  std::cout << "Iveskite 3 skaiciu\n";
+  std::cin>>c;
+  if(a==b&& b==c && a==c){
+    std::cout << "Visi lygus";
+  }
+   if(a<b && a<c){
+    std::cout << "1 maziausias";
+  }
+   if(b<a && b<c){
+    std::cout << "2 maziausias";
+  }
+  if(c<a && c<b){
+    std::cout << "3 maziausias";
+  }
+
+} 
+
+Ruby
+
+
+
+puts "iveskite 1 skaiciu"
+a=gets
+puts "iveskite 2 skaiciu"
+b=gets
+puts "iveskite 3 skaiciu"
+c=gets
+if (a==b && a==c && b==c)
+  puts "visi lygus"
+end
+if (a<b && a<c)
+  puts "1 maziausias"
+end
+if (b<a && b<c)
+  puts "2 maziausias"
+end
+if(c<a && c<b)
+  puts "3 maziausias"
+end
